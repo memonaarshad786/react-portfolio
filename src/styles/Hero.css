@@ -1,0 +1,48 @@
+/* Hero.css */
+.neon-button {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 10px rgba(192, 192, 192, 0.4);
+  }
+  
+  /* Neon glow effect on hover */
+  .neon-button:hover {
+    color: #000000;
+    box-shadow: 
+    0 0 10px rgba(192, 192, 192, 0.8),  /* Light silver */
+    0 0 20px rgba(192, 192, 192, 0.6),  /* Slightly darker silver */
+    0 0 40px rgba(192, 192, 192, 0.4),  /* Further glow effect */
+    0 0 80px rgba(255, 255, 255, 0.9);  /* Bright white for glittery highlight */
+   
+  }
+  
+  /* For extra glow animation effect on hover */
+  .neon-button::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50px;
+    box-shadow: 
+      0 0 15px rgba(192, 192, 192, 0.6),  /* Inner silver glow */
+      0 0 25px rgba(192, 192, 192, 0.5),  /* Slight outer glow */
+      0 0 50px rgba(255, 255, 255, 0.7);  /* Bright glitter-like shine */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  
+  }
+  
+  .neon-button:hover::before {
+    opacity:1;
+  }
+  

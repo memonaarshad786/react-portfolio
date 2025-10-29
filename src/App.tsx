@@ -1,18 +1,21 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
 
 import {
   About,
   Contact,
   Experience,
-  Feedbacks,
+  // Feedbacks,
   Hero,
   Navbar,
-  Tech,
   Works,
   StarsCanvas,
-} from "./components";
-import { useEffect } from "react";
-import { config } from "./constants/config";
+} from './components';
+// @ts-ignore: declaration file for './components/Skills' is missing (Skills.jsx)
+import Skills from './components/Skills';
+// @ts-ignore: declaration file for './components/Technologies' is missing
+import Technologies from './components/Technologies';
+import { useEffect } from 'react';
+import { config } from './constants/config';
 
 const App = () => {
   useEffect(() => {
@@ -30,9 +33,11 @@ const App = () => {
         </div>
         <About />
         <Experience />
-        <Tech />
+        <Skills />
+        <Technologies />
+        {/* <Tech /> */}
         <Works />
-        <Feedbacks />
+        {/* <Feedbacks /> */}
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />

@@ -31,6 +31,7 @@ import {
   carrent,
   jobit,
   tripguide,
+  travel,
   threejs,
 } from "../assets";
 
@@ -59,11 +60,11 @@ const services: TService[] = [
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Frontend Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "React Developer",
     icon: creator,
   },
 ];
@@ -126,7 +127,7 @@ const technologies: TTechnology[] = [
 const experiences: TExperience[] = [
   {
     title: "React.js Developer",
-    companyName: "Starbucks",
+    companyName: "PASCO",
     icon: starbucks,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
@@ -138,8 +139,8 @@ const experiences: TExperience[] = [
     ],
   },
   {
-    title: "React Native Developer",
-    companyName: "Tesla",
+    title: "Front End Developer",
+    companyName: "Codings First",
     icon: tesla,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
@@ -151,8 +152,8 @@ const experiences: TExperience[] = [
     ],
   },
   {
-    title: "Web Developer",
-    companyName: "Shopify",
+    title: "React Js Developer",
+    companyName: "Codings First",
     icon: shopify,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
@@ -164,8 +165,8 @@ const experiences: TExperience[] = [
     ],
   },
   {
-    title: "Full stack Developer",
-    companyName: "Meta",
+    title: "React Js Developer",
+    companyName: "Offneo",
     icon: meta,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
@@ -207,16 +208,16 @@ const testimonials: TTestimonial[] = [
 
 const projects: TProject[] = [
   {
-    name: "Car Rent",
+    name: "Ecommerce Website",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "  https://megamarket.pk Web-based platform that allows users to search, order, and manage shopping rentals from various providers, providing a seamless online shopping experience.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Next js",
         color: "green-text-gradient",
       },
       {
@@ -225,12 +226,12 @@ const projects: TProject[] = [
       },
     ],
     image: carrent,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://megamarket.pk",
   },
   {
-    name: "Job IT",
+    name: "Seller UI",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web application that enables users to manage their product listings, view sales analytics, and communicate with potential buyers.",
     tags: [
       {
         name: "react",
@@ -246,19 +247,19 @@ const projects: TProject[] = [
       },
     ],
     image: jobit,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://seller.megamarket.pk/",
   },
   {
-    name: "Trip Guide",
+    name: "Restaurant Website",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A comprehensive restaurant website that allows users to browse menus, make reservations, and order food online.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "React Js",
         color: "green-text-gradient",
       },
       {
@@ -267,6 +268,27 @@ const projects: TProject[] = [
       },
     ],
     image: tripguide,
+    sourceCodeLink: "https://github.com/",
+  },
+  {
+    name: "Travelocity",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "React",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: travel,
     sourceCodeLink: "https://github.com/",
   },
 ];

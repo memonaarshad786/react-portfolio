@@ -40,13 +40,13 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "John Doe — 3D Portfolio",
-    fullName: "John Doe",
-    email: "johndoe@mail.com",
+    title: "Memona Sehrish — React Js Developer",
+    fullName: "Memona Sehrish",
+    email: "meemonaarshad789@gmail.com",
   },
   hero: {
-    name: "John Doe",
-    p: ["I develop 3D visuals, user", "interfaces and web applications"],
+    name: "Memona Sehrish",
+    p: ["I'm a React Js Developer", "I create interactive websites."],
   },
   contact: {
     p: "Get in touch",
@@ -67,11 +67,7 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      content: `Hi, I am Memona Sehrish, a proficient Frontend Developer specializing in React JS and Vue JS. I excel in creating dynamic, high-performance web applications that enhance user experience across both desktop and mobile platforms. With a strong focus on React JS and Vue JS, I am adept at building scalable and maintainable solutions that ensure seamless functionality and superb design. My expertise extends to delivering responsive applications that provide consistent performance across all devices, with a commitment to writing clean, efficient code. My passion for staying updated with the latest industry trends and technologies drives me to continuously improve my skills and deliver innovative solutions. I am dedicated to collaborating effectively with cross-functional teams to achieve project goals and exceed client expectations.`,
     },
     experience: {
       p: "What I have done so far",
