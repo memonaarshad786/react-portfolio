@@ -24,16 +24,14 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
+  threejs,
   jobit,
   tripguide,
   travel,
-  threejs,
 } from '../assets';
+
+// Images you upload go in /public/images. See README-IMAGES.md for the list.
+const img = (path: string) => `/images/${path}`;
 
 export const navLinks: TNavLink[] = [
   {
@@ -42,7 +40,11 @@ export const navLinks: TNavLink[] = [
   },
   {
     id: 'work',
-    title: 'Work',
+    title: 'Experience',
+  },
+  {
+    id: 'projects',
+    title: 'Projects',
   },
   {
     id: 'contact',
@@ -52,244 +54,175 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: 'Web Developer',
+    title: 'Full Stack Engineer',
     icon: web,
   },
   {
-    title: 'React Native Developer',
-    icon: mobile,
+    title: 'Frontend (React / Next.js)',
+    icon: creator,
   },
   {
-    title: 'Frontend Developer',
+    title: 'Backend (Node / NestJS / Python)',
     icon: backend,
   },
   {
-    title: 'React Developer',
-    icon: creator,
+    title: 'AI / LLM Features',
+    icon: mobile,
   },
 ];
 
 const technologies: TTechnology[] = [
-  {
-    name: 'HTML 5',
-    icon: html,
-  },
-  {
-    name: 'CSS 3',
-    icon: css,
-  },
-  {
-    name: 'JavaScript',
-    icon: javascript,
-  },
-  {
-    name: 'TypeScript',
-    icon: typescript,
-  },
-  {
-    name: 'React JS',
-    icon: reactjs,
-  },
-  {
-    name: 'Redux Toolkit',
-    icon: redux,
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: tailwind,
-  },
-  {
-    name: 'Node JS',
-    icon: nodejs,
-  },
-  {
-    name: 'MongoDB',
-    icon: mongodb,
-  },
-  {
-    name: 'Three JS',
-    icon: threejs,
-  },
-  {
-    name: 'git',
-    icon: git,
-  },
-  {
-    name: 'figma',
-    icon: figma,
-  },
-  {
-    name: 'docker',
-    icon: docker,
-  },
+  { name: 'HTML 5', icon: html },
+  { name: 'CSS 3', icon: css },
+  { name: 'JavaScript', icon: javascript },
+  { name: 'TypeScript', icon: typescript },
+  { name: 'React JS', icon: reactjs },
+  { name: 'Redux Toolkit', icon: redux },
+  { name: 'Tailwind CSS', icon: tailwind },
+  { name: 'Node JS', icon: nodejs },
+  { name: 'MongoDB', icon: mongodb },
+  { name: 'Three JS', icon: threejs },
+  { name: 'git', icon: git },
+  { name: 'figma', icon: figma },
+  { name: 'docker', icon: docker },
 ];
 
 const experiences: TExperience[] = [
   {
-    title: 'React.js Developer',
-    companyName: 'PASCO',
-    icon: starbucks,
+    title: 'Software Engineer',
+    companyName: 'Dunify · Lahore, Pakistan',
+    icon: img('company/dunify.png'),
     iconBg: '#383E56',
-    date: 'June 2023 - August 2023',
+    date: 'Mar 2026 - Present',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Develop and maintain features for Octopus VAR, a desktop cybersecurity compliance application that checks network and server configurations against Minimum Security Baselines (MSBs) and CIS Benchmarks over SSH and WinRM.',
+      'Build validation, remediation, configuration-change detection, and compliance reporting features using React.js, NestJS, Node.js, Python, and PostgreSQL.',
+      'Develop AI-based features using LLMs that convert security benchmarks into structured rules, with data validation and export to Excel, reaching 92% rule-extraction accuracy across 150+ benchmark rules.',
+      'Reduced LLM hallucinations by 40% using RAG with ChromaDB, schema validation, and prompt constraints, and managed context size (about 4,000 tokens per request) by chunking long benchmark documents.',
     ],
   },
   {
-    title: 'Front End Developer',
-    companyName: 'Codings First',
-    icon: tesla,
+    title: 'MERN Stack Developer',
+    companyName: 'Offneo · Lahore, Pakistan',
+    icon: img('company/offneo.png'),
     iconBg: '#E6DEDD',
-    date: 'Sep 2023 - Dec 2023',
+    date: 'Aug 2025 - Mar 2026',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Developed full stack features for the MegaMarket and Attendix platforms in a 2-person team using React.js, Node.js, Express.js, MongoDB, TypeScript, and REST APIs.',
+      'Built React user interfaces for 4 connected e-commerce portals, creating shared, reusable components that kept the design consistent across all portals.',
+      'Integrated the front-end applications with a Java REST API and SQL database to keep customer, product, and order data in sync across 4 platforms, including guest checkout and order tracking.',
+      'Built Attendix back-end APIs and location-based features, including a 125-meter office geofence and automatic employee logout after 15–20 minutes outside the assigned location without a recorded break.',
     ],
   },
   {
-    title: 'React Js Developer',
-    companyName: 'Codings First',
-    icon: shopify,
+    title: 'Web Developer',
+    companyName: 'Codings First · Bahawalpur, Pakistan',
+    // Temporary logo. When you find the real one, save it as codings-first.png and change this to .png
+    icon: img('company/codings-first.svg'),
     iconBg: '#383E56',
-    date: 'Jan 2024 - March 2025',
+    date: 'Jul 2023 - Mar 2025',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'React Js Developer',
-    companyName: 'Offneo',
-    icon: meta,
-    iconBg: '#E6DEDD',
-    date: 'April 2025 - Present',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Developed approximately 10%–70% of the user interface for a Tanzanian automotive management system used in multiple countries, covering branch-level asset and operations management.',
+      'Implemented multi-branch features in React.js that let organizations manage showroom assets, daily operations, and branch-specific data, integrated with a .NET back end.',
+      'Built dashboards and charts for profit, loss, and operational performance, giving management clear reporting on business data.',
+      'Updated key features based on user requirements and feedback, improving usability of frequently used branch and management screens.',
     ],
   },
 ];
 
-const testimonials: TTestimonial[] = [
-  {
-    testimonial:
-      'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-    name: 'Sara Lee',
-    designation: 'CFO',
-    company: 'Acme Co',
-    image: 'https://randomuser.me/api/portraits/women/4.jpg',
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: 'Chris Brown',
-    designation: 'COO',
-    company: 'DEF Corp',
-    image: 'https://randomuser.me/api/portraits/men/5.jpg',
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: 'Lisa Wang',
-    designation: 'CTO',
-    company: '456 Enterprises',
-    image: 'https://randomuser.me/api/portraits/women/6.jpg',
-  },
-];
+const testimonials: TTestimonial[] = [];
 
 const projects: TProject[] = [
   {
-    name: 'Ecommerce Website',
+    name: 'Octopus VAR',
     description:
-      '  https://megamarket.pk Web-based platform that allows users to search, order, and manage shopping rentals from various providers, providing a seamless online shopping experience.',
+      'Desktop cybersecurity compliance app that connects to devices over SSH and WinRM and validates configurations against MSBs and CIS Benchmarks. Includes device discovery, remediation, change detection, Executive/Detailed reports, and an AI remediation impact assessment that cut malformed model outputs by 60% with responses under 5s. 94 test suites, 72.45% front-end coverage.',
     tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'Next js',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
+      { name: 'react', color: 'blue-text-gradient' },
+      { name: 'nestjs', color: 'green-text-gradient' },
+      { name: 'python', color: 'pink-text-gradient' },
+      { name: 'fastapi', color: 'blue-text-gradient' },
+      { name: 'postgresql', color: 'green-text-gradient' },
+      { name: 'ollama', color: 'pink-text-gradient' },
+      { name: 'chromadb', color: 'blue-text-gradient' },
+      { name: 'docker', color: 'green-text-gradient' },
     ],
-    image: carrent,
-    sourceCodeLink: 'https://megamarket.pk',
+    image: img('projects/octopus-var.png'),
+    liveLink: 'https://octopus-var.com',
+  },
+  {
+    name: 'CarOps.io',
+    description:
+      'Multi-branch automotive management system used in multiple countries. Built responsive dashboards, reusable components, and profit/loss and operational charts, integrated with a .NET back end to manage branch-specific assets across showroom locations.',
+    tags: [
+      { name: 'react', color: 'blue-text-gradient' },
+      { name: 'typescript', color: 'green-text-gradient' },
+      { name: 'tailwind', color: 'pink-text-gradient' },
+      { name: 'dotnet-api', color: 'blue-text-gradient' },
+    ],
+    image: img('projects/carops.png'),
+    liveLink: 'https://carops.io',
+  },
+  {
+    name: 'MegaMarket',
+    description:
+      'Multi-portal e-commerce platform where users search, order, and manage shopping from various providers: customer website, mobile app, seller dashboard, and admin portal. Shared UI components keep all 4 interfaces consistent, with customer, product, and order data synced through a Java REST API, including guest checkout and order tracking.',
+    tags: [
+      { name: 'react', color: 'blue-text-gradient' },
+      { name: 'tailwind', color: 'pink-text-gradient' },
+      { name: 'nodejs', color: 'green-text-gradient' },
+      { name: 'express', color: 'pink-text-gradient' },
+      { name: 'mongodb', color: 'blue-text-gradient' },
+      { name: 'java-api', color: 'green-text-gradient' },
+    ],
+    image: img('projects/megamarket.png'),
+    liveLink: 'https://megamarket.pk',
+  },
+  {
+    name: 'Attendix',
+    description:
+      'Workforce attendance platform. Built back-end APIs and location-based features, including a 125-meter office geofence and automatic logout after 15–20 minutes outside the assigned location without a recorded break.',
+    tags: [
+      { name: 'nodejs', color: 'blue-text-gradient' },
+      { name: 'express', color: 'green-text-gradient' },
+      { name: 'mongodb', color: 'pink-text-gradient' },
+      { name: 'geofencing', color: 'blue-text-gradient' },
+    ],
+    image: img('projects/attendix.svg'),
   },
   {
     name: 'Seller UI',
     description:
       'Web application that enables users to manage their product listings, view sales analytics, and communicate with potential buyers.',
     tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'restapi',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'scss',
-        color: 'pink-text-gradient',
-      },
+      { name: 'react', color: 'blue-text-gradient' },
+      { name: 'restapi', color: 'green-text-gradient' },
+      { name: 'scss', color: 'pink-text-gradient' },
     ],
     image: jobit,
-    sourceCodeLink: 'https://seller.megamarket.pk/',
+    liveLink: 'https://seller.megamarket.pk/',
   },
   {
     name: 'Restaurant Website',
     description:
       'A comprehensive restaurant website that allows users to browse menus, make reservations, and order food online.',
     tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'React Js',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
+      { name: 'nextjs', color: 'blue-text-gradient' },
+      { name: 'React Js', color: 'green-text-gradient' },
+      { name: 'css', color: 'pink-text-gradient' },
     ],
     image: tripguide,
-    sourceCodeLink: 'https://github.com/',
   },
   {
     name: 'Travelocity',
     description:
       'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
     tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'React',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
+      { name: 'nextjs', color: 'blue-text-gradient' },
+      { name: 'React', color: 'green-text-gradient' },
+      { name: 'css', color: 'pink-text-gradient' },
     ],
     image: travel,
-    sourceCodeLink: 'https://github.com/',
   },
 ];
 

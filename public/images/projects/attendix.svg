@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#151030"/>
+      <stop offset="1" stop-color="#1d1836"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#915EFF"/>
+      <stop offset="1" stop-color="#56CCF2"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#2a2550" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- Top bar -->
+  <rect x="40" y="40" width="1120" height="70" rx="16" fill="#100d25"/>
+  <circle cx="90" cy="75" r="18" fill="url(#accent)"/>
+  <path d="M82 75l6 6 11-12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="122" y="85" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#fff">Attendix</text>
+  <text x="1130" y="84" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#aaa6c3">Workforce Attendance</text>
+
+  <!-- Map panel with geofence -->
+  <rect x="40" y="140" width="680" height="620" rx="20" fill="#100d25"/>
+  <rect x="60" y="160" width="640" height="580" rx="14" fill="url(#grid)"/>
+  <path d="M60 420 C200 380 320 470 460 430 S640 360 700 390" fill="none" stroke="#2f2a5c" stroke-width="18"/>
+  <path d="M300 160 C320 300 280 460 340 740" fill="none" stroke="#2f2a5c" stroke-width="14"/>
+  <circle cx="380" cy="450" r="170" fill="#915EFF" fill-opacity="0.15" stroke="#915EFF" stroke-width="3" stroke-dasharray="12 10"/>
+  <line x1="380" y1="450" x2="550" y2="450" stroke="#915EFF" stroke-width="2"/>
+  <text x="465" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#c9b6ff">125 m</text>
+  <!-- Office pin -->
+  <path d="M380 450c-22-28-34-46-34-62a34 34 0 0 1 68 0c0 16-12 34-34 62z" fill="url(#accent)"/>
+  <circle cx="380" cy="388" r="12" fill="#fff"/>
+  <!-- Employees inside -->
+  <circle cx="300" cy="500" r="12" fill="#4ade80" stroke="#fff" stroke-width="3"/>
+  <circle cx="450" cy="520" r="12" fill="#4ade80" stroke="#fff" stroke-width="3"/>
+  <circle cx="330" cy="370" r="12" fill="#4ade80" stroke="#fff" stroke-width="3"/>
+  <!-- Employee outside -->
+  <circle cx="610" cy="640" r="12" fill="#f87171" stroke="#fff" stroke-width="3"/>
+  <rect x="470" y="672" width="220" height="44" rx="10" fill="#2a1a2e" stroke="#f87171"/>
+  <text x="580" y="700" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#fca5a5">Outside zone · 17 min</text>
+
+  <!-- Right panel: stats -->
+  <rect x="750" y="140" width="195" height="130" rx="20" fill="#100d25"/>
+  <text x="775" y="190" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#aaa6c3">Checked in</text>
+  <text x="775" y="245" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" fill="#4ade80">42</text>
+  <rect x="965" y="140" width="195" height="130" rx="20" fill="#100d25"/>
+  <text x="990" y="190" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#aaa6c3">On break</text>
+  <text x="990" y="245" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" fill="#facc15">5</text>
+
+  <!-- Right panel: attendance list -->
+  <rect x="750" y="295" width="410" height="465" rx="20" fill="#100d25"/>
+  <text x="775" y="340" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#fff">Today</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="18">
+    <circle cx="795" cy="395" r="20" fill="#2f2a5c"/>
+    <rect x="830" y="380" width="140" height="12" rx="6" fill="#aaa6c3"/>
+    <rect x="830" y="400" width="90" height="10" rx="5" fill="#4a4570"/>
+    <rect x="1040" y="380" width="100" height="30" rx="15" fill="#14532d"/>
+    <text x="1090" y="401" text-anchor="middle" fill="#4ade80">Present</text>
+
+    <circle cx="795" cy="475" r="20" fill="#2f2a5c"/>
+    <rect x="830" y="460" width="120" height="12" rx="6" fill="#aaa6c3"/>
+    <rect x="830" y="480" width="80" height="10" rx="5" fill="#4a4570"/>
+    <rect x="1040" y="460" width="100" height="30" rx="15" fill="#14532d"/>
+    <text x="1090" y="481" text-anchor="middle" fill="#4ade80">Present</text>
+
+    <circle cx="795" cy="555" r="20" fill="#2f2a5c"/>
+    <rect x="830" y="540" width="150" height="12" rx="6" fill="#aaa6c3"/>
+    <rect x="830" y="560" width="70" height="10" rx="5" fill="#4a4570"/>
+    <rect x="1040" y="540" width="100" height="30" rx="15" fill="#422006"/>
+    <text x="1090" y="561" text-anchor="middle" fill="#facc15">Break</text>
+
+    <circle cx="795" cy="635" r="20" fill="#2f2a5c"/>
+    <rect x="830" y="620" width="110" height="12" rx="6" fill="#aaa6c3"/>
+    <rect x="830" y="640" width="95" height="10" rx="5" fill="#4a4570"/>
+    <rect x="1030" y="620" width="110" height="30" rx="15" fill="#450a0a"/>
+    <text x="1085" y="641" text-anchor="middle" fill="#f87171">Logged out</text>
+
+    <circle cx="795" cy="715" r="20" fill="#2f2a5c"/>
+    <rect x="830" y="700" width="130" height="12" rx="6" fill="#aaa6c3"/>
+    <rect x="830" y="720" width="85" height="10" rx="5" fill="#4a4570"/>
+    <rect x="1040" y="700" width="100" height="30" rx="15" fill="#14532d"/>
+    <text x="1090" y="721" text-anchor="middle" fill="#4ade80">Present</text>
+  </g>
+</svg>

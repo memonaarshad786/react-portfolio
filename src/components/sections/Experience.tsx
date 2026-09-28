@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -12,6 +12,31 @@ import { Header } from "../atoms/Header";
 import { TExperience } from "../../types";
 import { config } from "../../constants/config";
 
+const CompanyIcon: React.FC<{ src: string; name: string }> = ({
+  src,
+  name,
+}) => {
+  const [failed, setFailed] = useState(false);
+
+  // Show the company's initial until a logo is uploaded
+  if (failed) {
+    return (
+      <span className="text-[22px] font-bold text-[#915EFF]">
+        {name.charAt(0)}
+      </span>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={name}
+      onError={() => setFailed(true)}
+      className="h-[60%] w-[60%] object-contain"
+    />
+  );
+};
+
 const ExperienceCard: React.FC<TExperience> = (experience) => {
   return (
     <VerticalTimelineElement
@@ -24,11 +49,7 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className="flex h-full w-full items-center justify-center">
-          <img
-            src={experience.icon}
-            alt={experience.companyName}
-            className="h-[60%] w-[60%] object-contain"
-          />
+          <CompanyIcon src={experience.icon} name={experience.companyName} />
         </div>
       }
     >

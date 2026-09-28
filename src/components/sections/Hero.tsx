@@ -25,8 +25,22 @@ const Hero = () => {
             {config.hero.p[0]} <br className="hidden sm:block" />
             {config.hero.p[1]}
           </p>
-          
-
+          <div className="relative z-10 flex flex-wrap gap-4">
+            <a
+              href="#contact"
+              className="rounded-xl bg-[#915EFF] px-6 py-3 font-bold text-white"
+            >
+              Hire Me
+            </a>
+            <a
+              href={config.html.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl border-2 border-[#915EFF] px-6 py-3 font-bold text-white"
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
       </div>
 
